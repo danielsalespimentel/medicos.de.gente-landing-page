@@ -751,21 +751,25 @@ footer {
     margin-bottom: 30px;
   }
   
+  /* Correção para a numeração dos passos em dispositivos móveis */
   .step {
-    flex-direction: column;
+    flex-direction: row; /* Alterado para row para manter o layout horizontal */
+    align-items: flex-start;
+    margin-bottom: 30px;
   }
   
-  /* Correção para a numeração dos passos em dispositivos móveis */
   .step-number {
-    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-bottom: 0;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
     border-radius: 50% !important;
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
-    min-height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 1/1; /* Garante que seja perfeitamente circular */
   }
   
   .product-card {
@@ -853,10 +857,10 @@ footer {
   }
   
   .floating-cta .btn {
-    width: 80%;
+    width: 60%; /* Reduzido para ficar mais discreto */
     margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 0.95rem;
+    padding: 8px 15px; /* Reduzido o padding para diminuir o tamanho */
+    font-size: 0.9rem; /* Reduzido o tamanho da fonte */
   }
 }
 
@@ -879,17 +883,26 @@ footer {
     font-size: 1.8rem;
   }
   
+  /* Ajustes específicos para iPhone */
   .step-number {
-    width: 50px;
-    height: 50px;
-    min-width: 50px;
-    min-height: 50px;
-    font-size: 1.3rem;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    font-size: 1.2rem;
+    margin-right: 12px;
+    aspect-ratio: 1/1; /* Garante que seja perfeitamente circular */
   }
   
+  /* Botão flutuante ainda menor para iPhone */
   .floating-cta .btn {
-    width: 90%;
-    padding: 8px 15px;
-    font-size: 0.9rem;
+    width: 50%;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+  }
+  
+  .floating-cta {
+    padding: 4px;
   }
 }

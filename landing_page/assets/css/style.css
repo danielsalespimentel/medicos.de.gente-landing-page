@@ -521,8 +521,8 @@ footer {
 }
 
 .footer-logo img {
-    height: 50px;
-    filter: brightness(0) invert(1);
+    height: 70px;
+    /* Removido o filtro para permitir que a logo colorida apareça corretamente */
 }
 
 .footer-links ul {

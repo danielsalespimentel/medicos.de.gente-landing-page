@@ -15,17 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Mostrar CTA flutuante após rolagem
+    // Mostrar WhatsApp flutuante após rolagem
     window.addEventListener('scroll', function() {
-        const floatingCta = document.querySelector('.floating-cta');
+        const floatingWhatsapp = document.querySelector('.floating-whatsapp');
         const footer = document.querySelector('footer');
         const footerPosition = footer.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
         
         if (window.scrollY > 300 && footerPosition > windowHeight) {
-            floatingCta.style.display = 'block';
+            floatingWhatsapp.style.display = 'block';
         } else {
-            floatingCta.style.display = 'none';
+            floatingWhatsapp.style.display = 'none';
         }
     });
     
@@ -48,17 +48,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Formulário de contato
-    const form = document.getElementById('appointment-form');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Aqui você pode adicionar código para enviar o formulário via AJAX
-            // Por enquanto, apenas mostramos uma mensagem de sucesso
-            alert('Sua solicitação foi enviada com sucesso! Em breve entraremos em contato.');
-            form.reset();
-        });
-    }
 });

@@ -18,6 +18,7 @@
     background-color: #ff8c4d;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white !important; /* Garantir que o texto permaneça branco no hover */
 }
 
 /* Estilos para o bloco de contato responsivo */

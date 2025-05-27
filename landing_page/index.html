@@ -17,8 +17,9 @@
     <meta property="og:site_name" content="Médicos de Gente">
     <meta property="og:locale" content="pt_BR">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/contact-info.css">
     <link rel="stylesheet" href="assets/css/style-updates.css">
+    <link rel="stylesheet" href="assets/css/contact-style.css">
+    <link rel="stylesheet" href="assets/css/floating-whatsapp.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -157,7 +158,6 @@
                     <div class="step-content">
                         <h3>Primeira consulta no domicílio</h3>
                         <p>Agendamos uma visita até a sua casa para uma avaliação completa. Durante essa consulta, realizamos uma escuta atenta, exame clínico detalhado e orientações personalizadas para o seu caso.</p>
-                        <div class="price">R$ 400,00</div>
                     </div>
                 </div>
                 <div class="step">
@@ -183,8 +183,7 @@
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Nova consulta presencial</h3>
-                        <p>Caso seja necessário um novo atendimento domiciliar dentro desse período, oferecemos um valor reduzido, cobrando R$ 200,00 (50% do valor da consulta inicial).</p>
-                        <div class="price">R$ 200,00</div>
+                        <p>Caso seja necessário um novo atendimento domiciliar dentro desse período, oferecemos um valor reduzido para nossos pacientes em acompanhamento.</p>
                     </div>
                 </div>
             </div>
@@ -274,7 +273,7 @@
         </div>
     </section>
 
-    <!-- Formulário de Contato/Agendamento -->
+    <!-- Contato/Agendamento -->
     <section id="agendar">
         <div class="container">
             <div class="section-header">
@@ -282,60 +281,27 @@
                 <p>Tenha médicos disponíveis para cuidar de você onde for mais confortável!</p>
             </div>
             <div class="contact-container">
-                <div class="contact-form">
-                    <form id="appointment-form">
-                        <div class="form-group">
-                            <label for="name">Nome completo</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="address">Endereço</label>
-                            <input type="text" id="address" name="address" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Motivo da consulta</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <p class="consent-text">Ao enviar este formulário, você concorda com nossos <a href="termos-uso.html">Termos de Uso</a> e <a href="politica-privacidade.html">Política de Privacidade</a> e com o uso dos seus dados para contato.</p>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-text">
-                            <p>Telefone</p>
-                            <a href="tel:+5581991918343">(81) 9 9191-8343</a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
+                <div class="contact-info-centered">
+                    <div class="whatsapp-card">
+                        <div class="whatsapp-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
-                        <div class="info-text">
-                            <p>WhatsApp</p>
-                            <a href="https://wa.me/5581991918343" class="whatsapp-btn">Fale conosco</a>
+                        <h3>Agende pelo WhatsApp</h3>
+                        <p>Clique no botão abaixo para agendar sua consulta diretamente pelo WhatsApp.</p>
+                        <a href="https://wa.me/5581991918343" class="btn btn-whatsapp">Agendar Consulta</a>
+                        <div class="terms-privacy">
+                            <p>Ao agendar, você concorda com nossos <a href="termos-uso.html">Termos de Uso</a> e <a href="politica-privacidade.html">Política de Privacidade</a>.</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <div class="info-text">
-                            <p>Instagram</p>
-                            <a href="https://www.instagram.com/medicos.de.gente" class="instagram-btn">@medicos.de.gente</a>
+                    <div class="social-media">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="info-text">
+                                <p>Instagram</p>
+                                <a href="https://www.instagram.com/medicos.de.gente" class="instagram-btn">@medicos.de.gente</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -360,12 +326,12 @@
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <a href="https://www.instagram.com/medicos.de.gente"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5581991918343"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/medicos.de.gente" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5581991918343" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Médicos de Gente. Todos os direitos reservados.</p>
+                <p>&copy; 2023 Médicos de Gente. Todos os direitos reservados.</p>
                 <div class="footer-legal">
                     <a href="termos-uso.html">Termos de Uso</a>
                     <a href="politica-privacidade.html">Política de Privacidade</a>
@@ -374,9 +340,11 @@
         </div>
     </footer>
 
-    <!-- Floating CTA -->
+    <!-- Floating WhatsApp Button -->
     <div class="floating-cta">
-        <a href="https://wa.me/5581991918343" class="btn btn-primary">Agende agora</a>
+        <a href="https://wa.me/5581991918343" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <script src="assets/js/script.js"></script>

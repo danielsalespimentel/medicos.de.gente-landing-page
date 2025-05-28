@@ -48,15 +48,21 @@
 }
 
 .post-card-image {
-    height: 180px;
+    height: 120px; /* Reduzido de 180px para 120px */
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f7fa; /* Fundo sutil */
+    padding: 15px; /* Adicionado padding para reduzir o tamanho efetivo da imagem */
 }
 
 .post-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 60px; /* Tamanho máximo fixo para a logo */
+    max-height: 60px; /* Tamanho máximo fixo para a logo */
+    object-fit: contain; /* Alterado para contain para manter proporções */
     transition: var(--transition);
+    opacity: 0.8; /* Leve transparência para visual mais suave */
 }
 
 .post-card:hover .post-card-image img {
@@ -220,6 +226,15 @@
     
     .post-body {
         font-size: 1rem;
+    }
+    
+    .post-card-image {
+        height: 100px; /* Ainda menor em dispositivos móveis */
+    }
+    
+    .post-card-image img {
+        max-width: 50px; /* Menor em dispositivos móveis */
+        max-height: 50px;
     }
 }
 

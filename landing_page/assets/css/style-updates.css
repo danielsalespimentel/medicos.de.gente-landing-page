@@ -67,6 +67,17 @@
     color: var(--secondary-color);
 }
 
+/* Centralização dos links legais no rodapé apenas para desktop */
+@media (min-width: 769px) {
+    .legal-links {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+}
+
 /* Ajustes responsivos para o rodapé */
 @media (max-width: 768px) {
     .footer-content {
@@ -78,4 +89,13 @@
     .footer-menu {
         margin: 15px 0;
     }
+}
+
+/* Correção para o botão "Agende sua consulta" */
+.btn-orange, .btn-primary {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: var(--primary-color) !important;
+    color: white !important;
 }

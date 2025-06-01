@@ -1,0 +1,39 @@
+/* Correções para o menu mobile */
+
+/* Esconde o botão X em desktop */
+@media (min-width: 992px) {
+  .menu-close-btn {
+    display: none !important;
+  }
+}
+
+/* Estiliza o botão X para mobile */
+.menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #3a5ca9;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+
+/* Mostra o botão X quando o menu está ativo em mobile */
+.menu.active .menu-close-btn {
+  display: block;
+}
+
+/* Ajustes para o menu mobile */
+@media (max-width: 991px) {
+  .menu {
+    padding-top: 60px;
+  }
+  
+  .menu a {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+}

@@ -45,6 +45,26 @@
 
 .social-media {
     flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.social-media .social-icon {
+    display: flex;
+    align-items: center;
+    color: var(--light-color);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-media .social-icon i {
+    font-size: 1.5rem;
+    margin-right: 8px;
+}
+
+.social-media .social-icon:hover {
+    color: var(--secondary-color);
 }
 
 /* Ajustes responsivos para o rodapé */

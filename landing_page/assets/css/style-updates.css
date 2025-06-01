@@ -76,8 +76,9 @@
     }
     
     .legal-links p {
-        display: flex;
-        justify-content: center;
+        text-align: center;
+        display: block;
+        width: 100%;
     }
 }
 
@@ -110,15 +111,4 @@
     opacity: 1 !important;
     background-color: var(--secondary-color) !important;
     color: white !important;
-    font-weight: bold;
-}
-
-/* Garantir visibilidade do botão no header */
-.cta-header .btn-primary {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    background-color: var(--primary-color) !important;
-    color: white !important;
-    font-weight: bold;
 }

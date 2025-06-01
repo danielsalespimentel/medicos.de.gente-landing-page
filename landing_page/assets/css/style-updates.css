@@ -72,9 +72,12 @@
     .legal-links {
         text-align: center;
         width: 100%;
+        margin: 20px 0;
+    }
+    
+    .legal-links p {
         display: flex;
         justify-content: center;
-        margin: 20px 0;
     }
 }
 
@@ -98,4 +101,24 @@
     opacity: 1 !important;
     background-color: var(--primary-color) !important;
     color: white !important;
+}
+
+/* Garantir visibilidade do botão na seção hero */
+#hero .btn-orange {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Garantir visibilidade do botão no header */
+.cta-header .btn-primary {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    font-weight: bold;
 }

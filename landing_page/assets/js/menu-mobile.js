@@ -1,4 +1,4 @@
-// Script para o funcionamento do menu mobile
+// Script para o funcionamento do menu mobile em coluna lateral
 document.addEventListener('DOMContentLoaded', function() {
   const menuMobile = document.querySelector('.menu-mobile');
   const menu = document.querySelector('.menu');

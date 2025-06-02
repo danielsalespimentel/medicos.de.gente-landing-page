@@ -16,8 +16,6 @@
     <!-- Meta tags para WhatsApp -->
     <meta property="og:site_name" content="Médicos de Gente">
     <meta property="og:locale" content="pt_BR">
-    
-    <!-- Estilos CSS externos -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style-updates.css">
     <link rel="stylesheet" href="assets/css/contact-style.css">
@@ -27,13 +25,12 @@
     <link rel="stylesheet" href="assets/css/instagram-style.css">
     <link rel="stylesheet" href="assets/css/footer-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/correcoes-pontuais.css">
     
-    <!-- Estilos integrados para correções -->
+    <!-- Estilos específicos para correções pontuais -->
     <style>
         /* Correção do botão flutuante do WhatsApp */
         .floating-whatsapp {
@@ -170,175 +167,15 @@
             margin-top: 15px !important;
             background-color: #2c4b8e !important;
         }
-        
-        /* CORREÇÕES PARA MENU MOBILE EM COLUNA LATERAL */
-        
-        /* Esconde o botão X em desktop */
-        @media (min-width: 992px) {
-            .menu-close-btn {
-                display: none !important;
-            }
-        }
-        
-        /* Estiliza o botão X para mobile */
-        .menu-close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
-            background: none;
-            border: none;
-            color: #3a5ca9;
-            cursor: pointer;
-            z-index: 1001;
-            display: none;
-        }
-        
-        /* Esconde o ícone de hambúrguer quando o menu está aberto */
-        .menu.active + .menu-mobile {
-            display: none;
-        }
-        
-        /* Mostra o botão X quando o menu está ativo em mobile */
-        .menu.active .menu-close-btn {
-            display: block;
-        }
-        
-        /* Ajustes para o menu mobile em coluna lateral */
-        @media (max-width: 991px) {
-            .menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                height: 100vh;
-                background-color: #fff;
-                padding-top: 60px;
-                transition: right 0.3s ease;
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-                overflow-y: auto;
-            }
-            
-            .menu.active {
-                right: 0;
-            }
-            
-            .menu a {
-                display: block;
-                margin: 15px 0;
-                font-size: 18px;
-                text-align: center;
-            }
-            
-            /* Overlay semi-transparente quando o menu está aberto */
-            .menu-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                z-index: 999;
-                display: none;
-            }
-            
-            .menu-overlay.active {
-                display: block;
-            }
-        }
-        
-        /* CORREÇÕES PARA O RODAPÉ EM DISPOSITIVOS MÓVEIS */
-        
-        /* Ajustes gerais para o rodapé em mobile */
-        @media (max-width: 767px) {
-            footer {
-                padding: 30px 15px;
-                text-align: center;
-            }
-            
-            /* Reduz o tamanho do logo no rodapé */
-            footer .logo {
-                width: 80px;
-                height: auto;
-                margin: 0 auto 20px;
-            }
-            
-            /* Melhora o espaçamento dos links do menu no rodapé */
-            footer .menu-links {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-                margin-bottom: 25px;
-            }
-            
-            footer .menu-links a {
-                margin: 0;
-                font-size: 14px;
-            }
-            
-            /* Ajusta o Instagram para ficar mais compacto */
-            footer .social-media {
-                margin: 15px auto;
-                height: auto;
-            }
-            
-            /* Ajusta os links legais para ficarem mais elegantes */
-            footer .legal-links {
-                margin-top: 15px;
-                padding-top: 15px;
-                border-top: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            /* Ajusta o copyright para ser mais discreto */
-            footer .copyright {
-                font-size: 12px;
-                margin-top: 15px;
-                opacity: 0.8;
-            }
-            
-            /* Cria uma divisão mais clara entre seções */
-            footer .footer-section {
-                margin-bottom: 15px;
-            }
-            
-            /* Ajustes específicos para o Instagram */
-            footer .social-icon {
-                width: 24px;
-                height: 24px;
-                margin-right: 8px;
-            }
-            
-            /* Ajustes para o layout geral do rodapé */
-            footer .footer-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            /* Ajustes para os links legais */
-            footer .legal-links a {
-                font-size: 12px;
-                margin: 0 5px;
-            }
-        }
-        
-        /* Ajustes específicos para telas muito pequenas */
-        @media (max-width: 480px) {
-            footer {
-                padding: 20px 10px;
-            }
-            
-            footer .logo {
-                width: 70px;
-            }
-            
-            footer .menu-links a {
-                font-size: 13px;
-            }
-        }
     </style>
+    <link rel="stylesheet" href="assets/css/mobile-fixes.css">
+    <link rel="stylesheet" href="assets/css/mobile-fixes-v2.css">
+    <link rel="stylesheet" href="assets/css/menu-mobile-fix.css">
+    <link rel="stylesheet" href="assets/css/footer-mobile.css">
+    <link rel="stylesheet" href="assets/css/menu-mobile-fix.css">
+    <link rel="stylesheet" href="assets/css/footer-mobile.css">
+    <link rel="stylesheet" href="assets/css/menu-mobile-fix.css">
+    <link rel="stylesheet" href="assets/css/footer-mobile.css">
 </head>
 <body>
     <!-- Header -->
@@ -367,10 +204,6 @@
         </div>
     </header>
 
-    <!-- Overlay para o menu mobile -->
-    <div class="menu-overlay"></div>
-
-    <!-- Resto do conteúdo do site... -->
     <!-- Hero Section -->
     <section id="hero">
         <div class="container">
@@ -395,22 +228,22 @@
                     <div class="feature-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3>Atendimento em Casa</h3>
-                    <p>Receba cuidados médicos no conforto do seu lar, sem precisar enfrentar trânsito ou salas de espera.</p>
+                    <h3>Conforto</h3>
+                    <p>Atendimento no conforto da sua casa, sem deslocamentos.</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-user-md"></i>
                     </div>
-                    <h3>Médicos Qualificados</h3>
-                    <p>Nossa equipe é formada por profissionais experientes e dedicados ao cuidado humanizado.</p>
+                    <h3>Personalizado</h3>
+                    <p>Cuidado exclusivo e adaptado às suas necessidades.</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-comments"></i>
                     </div>
-                    <h3>Disponibilidade</h3>
-                    <p>Atendimento em horários flexíveis, adaptados à sua rotina e necessidades.</p>
+                    <h3>Continuado</h3>
+                    <p>Acompanhamento direto com os médicos por 3 meses.</p>
                 </div>
             </div>
         </div>
@@ -421,43 +254,152 @@
         <div class="container">
             <div class="section-header">
                 <h2>Quem Somos</h2>
-                <p>Conheça a equipe de profissionais dedicados a cuidar da sua saúde com excelência e humanização.</p>
+                <p>Conheça os médicos que fazem parte do Médicos de Gente e suas histórias de dedicação à medicina de família e comunidade.</p>
             </div>
-            <div class="team-members">
-                <!-- Membros da equipe seriam listados aqui -->
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="assets/images/team/daniel_pimentel.jpg" alt="Dr. Daniel Pimentel">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Daniel Pimentel</h3>
+                        <h4>Médico de Família e Comunidade</h4>
+                        <p>Sou o Dr. Daniel, médico de família e comunidade com experiência em territórios urbanos e comunidades indígenas no Sertão de Pernambuco. Atuei junto às etnias Kambiwá e Kapinawá, onde aprendi que cuidar de saúde vai muito além de prescrever medicamentos — envolve escuta, presença e respeito à cultura, ao tempo e ao território.</p>
+                        <p>Hoje, na Região Metropolitana do Recife, sigo com o mesmo propósito: oferecer um cuidado singular, acessível e contínuo, que valoriza a pessoa em sua totalidade. O Médicos de Gente nasceu do desejo de transformar essa visão em realidade, conectando conhecimento técnico com afeto, compromisso e dignidade.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="assets/images/team/pedro_laporte_fixed.jpg" alt="Dr. Pedro Laporte">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Pedro Laporte</h3>
+                        <h4>Médico de Família e Comunidade</h4>
+                        <p>Sou o Dr. Pedro, médico de família e comunidade com atuação em áreas urbanas e na zona rural de Ibimirim, no sertão pernambucano. Foi nesse contexto desafiador, ao lado de comunidades muitas vezes esquecidas, que compreendi o verdadeiro poder de uma medicina que se faz próxima, contínua e acolhedora.</p>
+                        <p>Acredito que cuidar é caminhar junto — e foi dessa convicção que nasceu o Médicos de Gente, um projeto que une minha trajetória à de Daniel e de outros profissionais que acreditam que saúde se constrói com vínculo, escuta e responsabilidade compartilhada.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Galeria de Fotos -->
+            <div class="gallery-row">
+                <h4 class="gallery-row-title">Nossa Galeria</h4>
+                <div class="gallery">
+                    <!-- Primeira fileira (visível inicialmente) -->
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_new/98B42AED-C6FD-44C2-82E6-5D330515DCFB.jpeg" alt="Médicos de Gente em ação">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_new/1D0894FF-1993-4EAE-A3AC-92E3A4E18999.jpeg" alt="Atendimento médico">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_new/E380C092-DAF4-4360-8078-C3D30E512737.jpeg" alt="Consulta médica">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_new/2E486DE4-034D-43CF-8D20-CD59EE90A528.png" alt="Médicos de Gente">
+                    </div>
+                    
+                    <!-- Segunda fileira (visível inicialmente) -->
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_new/0F93B2AB-3C7D-4E22-BE8F-F0674239D3DF.jpeg" alt="Equipe médica">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_new/5F590AF4-CA91-4E99-ADE0-87D3E01BC52C.jpg" alt="Atendimento">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_new/03877C1A-19E2-4B15-8A64-9C2FE3D619B9.jpg" alt="Médicos em ação">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery_new/0A509AE0-D841-4D4A-80FE-2DC86FE81722.jpg" alt="Trabalho em comunidade">
+                    </div>
+                    
+                    <!-- Terceira fileira (oculta inicialmente) -->
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/DEF33861-F92E-46A7-B2A9-1AB28E2BAAB1.jpg" alt="Atendimento comunitário">
+                    </div>
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/8C1D46F2-94A8-4EC5-B629-A8FFAE4CCA7C.jpeg" alt="Consulta médica em comunidade">
+                    </div>
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/IMG_6377.png" alt="Médicos de Gente em ação">
+                    </div>
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/IMG_6708.png" alt="Atendimento médico">
+                    </div>
+                    
+                    <!-- Quarta fileira (oculta inicialmente) -->
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/Imagemlandingpage15.png" alt="Consulta médica">
+                    </div>
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/IMG_8943.png" alt="Médicos de Gente">
+                    </div>
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/IMG_5824.png" alt="Equipe médica">
+                    </div>
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/IMG_0030.png" alt="Atendimento">
+                    </div>
+                    
+                    <!-- Quinta fileira (oculta inicialmente) -->
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/IMG_9210.png" alt="Médicos em ação">
+                    </div>
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/IMG_5243.png" alt="Trabalho em comunidade">
+                    </div>
+                    <div class="gallery-item gallery-hidden">
+                        <img src="assets/images/gallery_new/Imagemlandingpage14.png" alt="Atendimento comunitário">
+                    </div>
+                </div>
+                <button class="gallery-show-more">Mostrar mais</button>
             </div>
         </div>
     </section>
 
-    <!-- Serviços -->
+    <!-- Como Funciona -->
     <section id="servicos">
         <div class="container">
             <div class="section-header">
-                <h2>Nossos Serviços</h2>
-                <p>Oferecemos uma variedade de serviços médicos domiciliares para atender às necessidades da sua família.</p>
+                <h2>Como Funciona</h2>
+                <p>Nosso compromisso é garantir um atendimento humanizado, acessível e próximo, respeitando suas necessidades.</p>
             </div>
-            <div class="services">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-stethoscope"></i>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Primeira consulta no domicílio</h3>
+                        <p>Agendamos uma visita até a sua casa para uma avaliação completa. Durante essa consulta, realizamos uma escuta atenta, exame clínico detalhado e orientações personalizadas para o seu caso.</p>
                     </div>
-                    <h3>Consultas Médicas</h3>
-                    <p>Atendimento clínico geral e especializado no conforto do seu lar.</p>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-heartbeat"></i>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Acompanhamento direto pelo WhatsApp</h3>
+                        <p>Após essa primeira consulta, criamos um grupo exclusivo no WhatsApp com o Dr. Daniel e o Dr. Pedro. Esse canal estará disponível por 3 meses para:</p>
+                        <ul>
+                            <li>Esclarecimento de dúvidas sobre o tratamento</li>
+                            <li>Avaliação de exames e orientações</li>
+                            <li>Renovação de receitas médicas, quando necessário</li>
+                        </ul>
                     </div>
-                    <h3>Check-up Completo</h3>
-                    <p>Avaliação detalhada da sua saúde com exames e orientações personalizadas.</p>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-pills"></i>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>E depois dos 3 meses?</h3>
+                        <p>Se desejar continuar com o acompanhamento, basta renovar sua consulta, garantindo mais 3 meses de suporte.</p>
                     </div>
-                    <h3>Acompanhamento Contínuo</h3>
-                    <p>Monitoramento regular da sua saúde e ajustes no tratamento quando necessário.</p>
                 </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Nova consulta presencial</h3>
+                        <p>Caso seja necessário um novo atendimento domiciliar dentro desse período, oferecemos um valor reduzido para nossos pacientes em acompanhamento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-cta">
+                <a href="#agendar" class="btn btn-primary">Agende sua consulta</a>
             </div>
         </div>
     </section>
@@ -467,10 +409,30 @@
         <div class="container">
             <div class="section-header">
                 <h2>Depoimentos</h2>
-                <p>Veja o que nossos pacientes dizem sobre o atendimento Médicos de Gente.</p>
+                <p>Veja o que nossos pacientes dizem sobre o atendimento do Médicos de Gente.</p>
             </div>
-            <div class="testimonial-slider">
-                <!-- Depoimentos seriam listados aqui -->
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Me senti ouvida e acolhida desde a primeira visita. É diferente ter médicos que realmente se importam e dedicam tempo para entender o que estamos passando."</p>
+                        <p class="testimonial-author">Maria</p>
+                        <p class="testimonial-location">Bairro Caixa D'Água, Olinda</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"O acompanhamento pelo WhatsApp me deu muita segurança. Poder tirar dúvidas diretamente com os médicos sem precisar marcar nova consulta fez toda diferença no meu tratamento."</p>
+                        <p class="testimonial-author">Rita</p>
+                        <p class="testimonial-location">Bairro Iputinga, Recife</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Minha mãe tem 82 anos e dificuldade para se locomover. O atendimento em casa foi fundamental para ela receber o cuidado médico que precisava, com dignidade e sem o estresse de deslocamentos."</p>
+                        <p class="testimonial-author">Carlos</p>
+                        <p class="testimonial-location">Bairro Boa Viagem, Recife</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -479,24 +441,72 @@
     <section id="produtos">
         <div class="container">
             <div class="section-header">
-                <h2>Nossos Produtos</h2>
-                <p>Conheça os planos e pacotes de atendimento disponíveis para você e sua família.</p>
+                <h2>Produtos</h2>
+                <p>Além do atendimento médico domiciliar, estamos desenvolvendo produtos para ampliar o acesso à saúde de qualidade.</p>
             </div>
-            <div class="products">
-                <!-- Produtos seriam listados aqui -->
+            <div class="products-container">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Livro</h3>
+                    <p>Um guia prático sobre medicina de família e comunidade, com foco em cuidados domiciliares e fortalecimento do vínculo médico-paciente.</p>
+                    <a href="#" class="btn btn-secondary">Em breve</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Aplicativo</h3>
+                    <p>Um aplicativo de educação e produtividade para profissionais da Atenção Primária à Saúde (APS), com ferramentas para apoio à decisão clínica, prescrição e acompanhamento.</p>
+                    <a href="#" class="btn btn-secondary">Em breve</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mentoria sobre IA na APS</h3>
+                    <p>Programa de mentoria sobre o uso da Inteligência Artificial na Atenção Primária à Saúde, com foco em aplicações práticas e otimização do atendimento.</p>
+                    <a href="#" class="btn btn-secondary">Em breve</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato e Agendamento -->
+    <!-- Sobre Nós / Missão -->
+    <section id="missao">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa Missão</h2>
+            </div>
+            <div class="mission-content">
+                <div class="mission-text">
+                    <p>Acreditamos que a medicina de família e comunidade é o caminho para um sistema de saúde mais humano, eficiente e acessível. Nossa missão é levar esse cuidado para dentro das casas, criando vínculos duradouros e promovendo saúde de forma integral.</p>
+                    <p>Queremos transformar a experiência de cuidado em saúde, tornando-a mais próxima, contínua e centrada nas reais necessidades de cada pessoa e família.</p>
+                </div>
+                <div class="mission-image">
+                    <img src="assets/images/mission/nossa_missao.png" alt="Médicos de Gente em ação">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agendar -->
     <section id="agendar">
         <div class="container">
             <div class="section-header">
-                <h2>Agende sua Consulta</h2>
-                <p>Entre em contato conosco para agendar uma visita ou tirar suas dúvidas.</p>
+                <h2>Agende pelo WhatsApp</h2>
+                <p>Entre em contato para agendar sua consulta ou tirar dúvidas sobre nossos serviços.</p>
             </div>
-            <div class="contact-form">
-                <!-- Formulário de contato seria inserido aqui -->
+            <div class="contact-info-centered">
+                <div class="whatsapp-card">
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Atendimento Personalizado</h3>
+                    <p>Entre em contato pelo WhatsApp para agendar sua consulta ou tirar dúvidas sobre nossos serviços.</p>
+                    <a href="https://wa.me/5581991918343" target="_blank" class="btn-whatsapp">Agendar consulta</a>
+                </div>
             </div>
         </div>
     </section>
@@ -506,10 +516,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="assets/images/logo-footer.png" alt="Médicos de Gente" class="logo">
+                    <img src="assets/images/MdG-Logo.png" alt="Médicos de Gente">
                 </div>
                 <div class="footer-nav">
-                    <ul class="footer-menu menu-links">
+                    <ul class="footer-menu">
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#team">Quem Somos</a></li>
                         <li><a href="#servicos">Serviços</a></li>
@@ -520,74 +530,56 @@
                     </ul>
                 </div>
                 <div class="social-media">
-                    <a href="https://www.instagram.com/medicos.de.gente" class="social-icon" target="_blank">
+                    <a href="https://www.instagram.com/medicos.de.gente/" target="_blank" class="social-icon">
                         <i class="fab fa-instagram"></i>
-                        @medicos.de.gente
+                        <span>@medicos.de.gente</span>
                     </a>
                 </div>
             </div>
             <div class="legal-links">
-                <a href="termos.html">Termos de Uso</a> | <a href="privacidade.html">Política de Privacidade</a>
+                <p><a href="termos-uso.html">Termos de Uso</a> | <a href="politica-privacidade.html">Política de Privacidade</a></p>
             </div>
             <div class="copyright">
-                &copy; 2025 Médicos de Gente. Todos os direitos reservados.
+                <p>© 2025 Médicos de Gente. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Botão flutuante do WhatsApp -->
+    <!-- Floating WhatsApp Button -->
     <div class="floating-whatsapp">
-        <a href="https://wa.me/5511999999999" target="_blank">
+        <a href="https://wa.me/5581991918343" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
     <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Script para a funcionalidade "Mostrar mais" da galeria -->
     <script>
-        // Script para o funcionamento do menu mobile em coluna lateral
         document.addEventListener('DOMContentLoaded', function() {
-            const menuMobile = document.querySelector('.menu-mobile');
-            const menu = document.querySelector('.menu');
-            const menuOverlay = document.querySelector('.menu-overlay');
+            const showMoreBtn = document.querySelector('.gallery-show-more');
+            const hiddenItems = document.querySelectorAll('.gallery-hidden');
             
-            // Adiciona botão de fechar ao menu
-            const closeButton = document.createElement('button');
-            closeButton.className = 'menu-close-btn';
-            closeButton.innerHTML = '&times;'; // Símbolo X
-            closeButton.setAttribute('aria-label', 'Fechar menu');
-            menu.appendChild(closeButton);
-            
-            // Abre o menu ao clicar no ícone de hambúrguer
-            menuMobile.addEventListener('click', function() {
-                menu.classList.add('active');
-                menuOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Impede rolagem da página
-            });
-            
-            // Fecha o menu ao clicar no botão X
-            closeButton.addEventListener('click', function() {
-                menu.classList.remove('active');
-                menuOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Restaura rolagem da página
-            });
-            
-            // Fecha o menu ao clicar no overlay
-            menuOverlay.addEventListener('click', function() {
-                menu.classList.remove('active');
-                menuOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Restaura rolagem da página
-            });
-            
-            // Fecha o menu ao clicar em um item do menu
-            const menuItems = document.querySelectorAll('.menu a');
-            menuItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    menu.classList.remove('active');
-                    menuOverlay.classList.remove('active');
-                    document.body.style.overflow = ''; // Restaura rolagem da página
+            showMoreBtn.addEventListener('click', function() {
+                hiddenItems.forEach(item => {
+                    item.classList.toggle('gallery-hidden');
                 });
+                
+                if (showMoreBtn.textContent === 'Mostrar mais') {
+                    showMoreBtn.textContent = 'Mostrar menos';
+                } else {
+                    showMoreBtn.textContent = 'Mostrar mais';
+                    // Rolar para o topo da galeria quando esconder as imagens
+                    document.querySelector('.gallery-row').scrollIntoView({behavior: 'smooth'});
+                }
             });
         });
     </script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/mobile-menu-v2.js"></script>
+    <script src="assets/js/menu-mobile.js"></script>
+    <script src="assets/js/menu-mobile.js"></script>
+    <script src="assets/js/menu-mobile.js"></script>
 </body>
 </html>

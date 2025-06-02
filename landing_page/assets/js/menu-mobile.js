@@ -10,14 +10,30 @@ document.addEventListener('DOMContentLoaded', function() {
   closeButton.setAttribute('aria-label', 'Fechar menu');
   menu.appendChild(closeButton);
   
+  // Cria overlay para fundo semi-transparente
+  const overlay = document.createElement('div');
+  overlay.className = 'menu-overlay';
+  document.body.appendChild(overlay);
+  
   // Abre o menu ao clicar no ícone de hambúrguer
   menuMobile.addEventListener('click', function() {
-    menu.classList.toggle('active');
+    menu.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Impede rolagem da página
   });
   
   // Fecha o menu ao clicar no botão X
   closeButton.addEventListener('click', function() {
     menu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restaura rolagem da página
+  });
+  
+  // Fecha o menu ao clicar no overlay
+  overlay.addEventListener('click', function() {
+    menu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restaura rolagem da página
   });
   
   // Fecha o menu ao clicar em um item do menu
@@ -25,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
   menuItems.forEach(item => {
     item.addEventListener('click', function() {
       menu.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = ''; // Restaura rolagem da página
     });
   });
 });

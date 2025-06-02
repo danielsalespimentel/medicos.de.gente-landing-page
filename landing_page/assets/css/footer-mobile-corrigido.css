@@ -16,32 +16,78 @@
     width: 100%;
   }
   
-  /* Logo centralizada no topo */
+  /* Remover qualquer estrutura de colunas que possa estar afetando o alinhamento */
+  footer .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  footer .col-md-4, 
+  footer .col-md-3, 
+  footer .col-md-5 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Logo centralizada no topo - ajustes específicos e reforçados */
   footer .footer-logo {
-    margin-bottom: 25px;
+    margin: 0 auto 25px auto;
     order: 1;
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    right: 0;
+    float: none;
   }
   
-  /* Reduz o tamanho do logo no rodapé e centraliza */
+  /* Reduz o tamanho do logo no rodapé e centraliza - correção reforçada */
   footer .logo, 
   footer .footer-logo img {
     width: 80px;
     height: auto;
     margin: 0 auto;
     display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+    float: none;
+    transform: translateX(0);
+  }
+  
+  /* Força centralização absoluta da logo */
+  footer .footer-logo a,
+  footer .footer-logo div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    float: none;
   }
   
   /* Menu de links abaixo da logo */
   footer .footer-nav {
     width: 100%;
     order: 2;
-    margin-bottom: 25px;
+    margin: 25px auto;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   
   /* Melhora o espaçamento dos links do menu no rodapé */
@@ -78,10 +124,13 @@
     height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   
   footer .social-media .social-icon {
     justify-content: center;
+    align-items: center;
+    display: flex;
   }
   
   /* Ajusta os links legais para ficarem mais elegantes */
@@ -116,17 +165,48 @@
     text-align: center !important;
   }
   
-  footer .row {
-    justify-content: center !important;
+  /* Correção específica para qualquer container que possa estar afetando o alinhamento */
+  footer .container,
+  footer .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
   
-  footer .col-md-4, 
-  footer .col-md-3, 
-  footer .col-md-5 {
+  /* Correção para qualquer elemento que possa estar desalinhando a logo */
+  footer .footer-logo-container,
+  footer .logo-container {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  /* Garantir que qualquer elemento pai da logo esteja centralizado */
+  footer .footer-logo-wrapper,
+  footer .logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  /* Correção específica para garantir centralização absoluta da logo */
+  footer .footer-logo * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    float: none !important;
+    left: 0 !important;
+    right: 0 !important;
   }
 }
 

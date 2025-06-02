@@ -12,6 +12,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
   }
   
   /* Logo centralizada no topo */
@@ -20,6 +22,8 @@
     order: 1;
     width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
   
   /* Reduz o tamanho do logo no rodapé e centraliza */
@@ -36,6 +40,8 @@
     width: 100%;
     order: 2;
     margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
   }
   
   /* Melhora o espaçamento dos links do menu no rodapé */
@@ -46,17 +52,22 @@
     gap: 12px;
     margin: 0;
     padding: 0;
+    width: 100%;
+    text-align: center;
   }
   
   footer .footer-menu li {
     margin: 0;
     padding: 0;
     list-style: none;
+    width: 100%;
+    text-align: center;
   }
   
   footer .footer-menu a {
     margin: 0;
     font-size: 14px;
+    display: inline-block;
   }
   
   /* Instagram abaixo dos links */
@@ -65,6 +76,8 @@
     order: 3;
     margin: 15px auto;
     height: auto;
+    display: flex;
+    justify-content: center;
   }
   
   footer .social-media .social-icon {
@@ -77,6 +90,8 @@
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     order: 4;
+    width: 100%;
+    text-align: center;
   }
   
   /* Ajusta o copyright para ser mais discreto */
@@ -85,6 +100,8 @@
     margin-top: 15px;
     opacity: 0.8;
     order: 5;
+    width: 100%;
+    text-align: center;
   }
   
   /* Ajustes para os links legais */
@@ -92,6 +109,24 @@
   footer .legal-links p {
     font-size: 12px;
     margin: 0 5px;
+  }
+  
+  /* Força centralização de todos os elementos do rodapé */
+  footer * {
+    text-align: center !important;
+  }
+  
+  footer .row {
+    justify-content: center !important;
+  }
+  
+  footer .col-md-4, 
+  footer .col-md-3, 
+  footer .col-md-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 

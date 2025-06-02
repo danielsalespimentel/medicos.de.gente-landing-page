@@ -22,11 +22,21 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(menuOverlay);
   }
   
+  // Força o posicionamento do menu à direita
+  function forceRightPosition() {
+    menu.style.left = 'auto';
+    menu.style.right = menu.classList.contains('active') ? '0' : '-100%';
+  }
+  
+  // Aplica o posicionamento inicial
+  forceRightPosition();
+  
   // Abre o menu ao clicar no ícone de hambúrguer
   menuMobile.addEventListener('click', function() {
     menu.classList.add('active');
     menuOverlay.classList.add('active');
     document.body.style.overflow = 'hidden'; // Impede rolagem da página
+    forceRightPosition(); // Garante posicionamento à direita
   });
   
   // Fecha o menu ao clicar no botão X
@@ -34,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu.classList.remove('active');
     menuOverlay.classList.remove('active');
     document.body.style.overflow = ''; // Restaura rolagem da página
+    forceRightPosition(); // Garante posicionamento à direita
   });
   
   // Fecha o menu ao clicar no overlay
@@ -41,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu.classList.remove('active');
     menuOverlay.classList.remove('active');
     document.body.style.overflow = ''; // Restaura rolagem da página
+    forceRightPosition(); // Garante posicionamento à direita
   });
   
   // Fecha o menu ao clicar em um item do menu
@@ -50,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
       menu.classList.remove('active');
       menuOverlay.classList.remove('active');
       document.body.style.overflow = ''; // Restaura rolagem da página
+      forceRightPosition(); // Garante posicionamento à direita
     });
   });
 });

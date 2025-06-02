@@ -1,0 +1,48 @@
+/* Correções para a galeria em dispositivos móveis */
+
+/* Ajuste para exibir 2 colunas na galeria em dispositivos móveis */
+@media (max-width: 767px) {
+  /* Configuração do grid para 2 colunas */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 10px !important;
+    width: 100% !important;
+  }
+  
+  /* Ajuste para cada item da galeria */
+  .gallery-item {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Garantir que as imagens se ajustem corretamente */
+  .gallery-item img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Ajuste para o botão "Mostrar mais" */
+  .gallery-show-more {
+    margin-top: 20px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  /* Ajuste para o título da galeria */
+  .gallery-row-title {
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
+  }
+}
+
+/* Ajustes específicos para telas muito pequenas */
+@media (max-width: 480px) {
+  .gallery {
+    grid-gap: 8px !important;
+  }
+}

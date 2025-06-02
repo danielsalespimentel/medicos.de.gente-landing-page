@@ -45,10 +45,12 @@
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     overflow-y: auto;
+    left: auto !important; /* Força a não usar left */
   }
   
   .menu.active {
     right: 0; /* Desliza o menu para dentro da tela pela direita */
+    left: auto !important; /* Força a não usar left quando ativo */
   }
   
   .menu a {

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médicos de Gente - Cuidado exclusivo, singular e continuado</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    
+    <!-- Meta tags Open Graph para compartilhamento em redes sociais -->
+    <meta property="og:title" content="Médicos de Gente - Cuidado exclusivo, singular e continuado">
+    <meta property="og:description" content="Atendimento médico domiciliar com acompanhamento contínuo para você e sua família.">
+    <meta property="og:image" content="https://medicosdegente.com.br/assets/images/og-image-square.png">
+    <meta property="og:url" content="https://medicosdegente.com.br">
+    <meta property="og:type" content="website">
+    
+    <!-- Meta tags para WhatsApp -->
+    <meta property="og:site_name" content="Médicos de Gente">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Estilos CSS externos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-updates.css">
+    <link rel="stylesheet" href="assets/css/contact-style.css">
+    <link rel="stylesheet" href="assets/css/floating-whatsapp.css">
+    <link rel="stylesheet" href="assets/css/gallery-style.css">
+    <link rel="stylesheet" href="assets/css/gallery-style-new.css">
+    <link rel="stylesheet" href="assets/css/instagram-style.css">
+    <link rel="stylesheet" href="assets/css/footer-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos integrados para correções -->
+    <style>
+        /* Correção do botão flutuante do WhatsApp */
+        .floating-whatsapp {
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 9999 !important;
+            display: block !important;
+            width: 60px !important;
+            height: 60px !important;
+        }
+        
+        .floating-whatsapp a {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 60px !important;
+            height: 60px !important;
+            background-color: #25D366 !important;
+            border-radius: 50% !important;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+            transition: transform 0.3s ease !important;
+            text-decoration: none !important;
+        }
+        
+        .floating-whatsapp a:hover {
+            transform: scale(1.1) !important;
+        }
+        
+        .floating-whatsapp i.fab.fa-whatsapp {
+            font-size: 32px !important;
+            color: white !important;
+            display: inline-block !important;
+        }
+        
+        /* Esconder qualquer texto "WhatsApp" que apareça no canto inferior */
+        img[alt="WhatsApp"] {
+            display: none !important;
+        }
+        
+        /* Alinhamento preciso do Instagram com o menu no rodapé */
+        .footer-content {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            flex-wrap: wrap !important;
+            padding: 0 15px !important;
+        }
+        
+        /* Ajuste específico para o alinhamento vertical do Instagram */
+        .social-media {
+            display: flex !important;
+            align-items: center !important;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            height: 100% !important;
+            position: relative !important;
+            top: 0 !important;
+        }
+        
+        .social-media .social-icon {
+            display: flex !important;
+            align-items: center !important;
+            height: 100% !important;
+            color: #fff !important;
+            font-size: 0.95rem !important;
+            transition: color 0.3s ease !important;
+            text-decoration: none !important;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        /* Ajuste para alinhar o Instagram na mesma linha do menu */
+        @media (min-width: 769px) {
+            .footer-content {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 15px !important;
+            }
+            
+            .footer-logo {
+                flex: 0 0 auto !important;
+            }
+            
+            .footer-nav {
+                flex: 1 1 auto !important;
+                margin: 0 20px !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+            
+            .social-media {
+                flex: 0 0 auto !important;
+                margin-left: 0 !important;
+                display: flex !important;
+                align-items: center !important;
+                height: 100% !important;
+            }
+            
+            .footer-menu {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+        
+        /* Garantir que os links legais fiquem dentro do retângulo maior */
+        .legal-links {
+            text-align: center !important;
+            width: 100% !important;
+            margin: 20px 0 0 0 !important;
+            padding-top: 15px !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+            background-color: #2c4b8e !important;
+        }
+        
+        .legal-links a {
+            color: #fff !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+            font-weight: 500 !important;
+        }
+        
+        .legal-links a:hover {
+            color: #ff7f50 !important;
+        }
+        
+        .copyright {
+            text-align: center !important;
+            font-size: 0.85rem !important;
+            opacity: 0.8 !important;
+            margin-top: 15px !important;
+            background-color: #2c4b8e !important;
+        }
+        
+        /* CORREÇÕES PARA MENU MOBILE EM COLUNA LATERAL */
+        
+        /* Esconde o botão X em desktop */
+        @media (min-width: 992px) {
+            .menu-close-btn {
+                display: none !important;
+            }
+        }
+        
+        /* Estiliza o botão X para mobile */
+        .menu-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #3a5ca9;
+            cursor: pointer;
+            z-index: 1001;
+            display: none;
+        }
+        
+        /* Esconde o ícone de hambúrguer quando o menu está aberto */
+        .menu.active + .menu-mobile {
+            display: none;
+        }
+        
+        /* Mostra o botão X quando o menu está ativo em mobile */
+        .menu.active .menu-close-btn {
+            display: block;
+        }
+        
+        /* Ajustes para o menu mobile em coluna lateral */
+        @media (max-width: 991px) {
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: #fff;
+                padding-top: 60px;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                overflow-y: auto;
+            }
+            
+            .menu.active {
+                right: 0;
+            }
+            
+            .menu a {
+                display: block;
+                margin: 15px 0;
+                font-size: 18px;
+                text-align: center;
+            }
+            
+            /* Overlay semi-transparente quando o menu está aberto */
+            .menu-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                display: none;
+            }
+            
+            .menu-overlay.active {
+                display: block;
+            }
+        }
+        
+        /* CORREÇÕES PARA O RODAPÉ EM DISPOSITIVOS MÓVEIS */
+        
+        /* Ajustes gerais para o rodapé em mobile */
+        @media (max-width: 767px) {
+            footer {
+                padding: 30px 15px;
+                text-align: center;
+            }
+            
+            /* Reduz o tamanho do logo no rodapé */
+            footer .logo {
+                width: 80px;
+                height: auto;
+                margin: 0 auto 20px;
+            }
+            
+            /* Melhora o espaçamento dos links do menu no rodapé */
+            footer .menu-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 25px;
+            }
+            
+            footer .menu-links a {
+                margin: 0;
+                font-size: 14px;
+            }
+            
+            /* Ajusta o Instagram para ficar mais compacto */
+            footer .social-media {
+                margin: 15px auto;
+                height: auto;
+            }
+            
+            /* Ajusta os links legais para ficarem mais elegantes */
+            footer .legal-links {
+                margin-top: 15px;
+                padding-top: 15px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            /* Ajusta o copyright para ser mais discreto */
+            footer .copyright {
+                font-size: 12px;
+                margin-top: 15px;
+                opacity: 0.8;
+            }
+            
+            /* Cria uma divisão mais clara entre seções */
+            footer .footer-section {
+                margin-bottom: 15px;
+            }
+            
+            /* Ajustes específicos para o Instagram */
+            footer .social-icon {
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+            }
+            
+            /* Ajustes para o layout geral do rodapé */
+            footer .footer-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Ajustes para os links legais */
+            footer .legal-links a {
+                font-size: 12px;
+                margin: 0 5px;
+            }
+        }
+        
+        /* Ajustes específicos para telas muito pequenas */
+        @media (max-width: 480px) {
+            footer {
+                padding: 20px 10px;
+            }
+            
+            footer .logo {
+                width: 70px;
+            }
+            
+            footer .menu-links a {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/favicon.png" alt="Médicos de Gente">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#team">Quem Somos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="#agendar">Contato</a></li>
+                </ul>
+                <div class="menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <div class="cta-header">
+                <a href="#agendar" class="btn btn-primary">Agende sua consulta</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay para o menu mobile -->
+    <div class="menu-overlay"></div>
+
+    <!-- Resto do conteúdo do site... -->
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cuidado exclusivo, singular e continuado</h1>
+                <h2>De gente. Para gente.</h2>
+                <p>Atendimento médico domiciliar com acompanhamento contínuo para você e sua família.</p>
+                <a href="#agendar" class="btn btn-orange">Agende sua consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Serviço -->
+    <section id="sobre">
+        <div class="container">
+            <div class="section-header">
+                <h2>Atendimento Domiciliar</h2>
+                <p>Sabemos que, muitas vezes, ir até um consultório médico pode ser um desafio. Por isso, criamos um serviço pensado para trazer mais conforto, segurança e praticidade para você e sua família.</p>
+            </div>
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Atendimento em Casa</h3>
+                    <p>Receba cuidados médicos no conforto do seu lar, sem precisar enfrentar trânsito ou salas de espera.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Médicos Qualificados</h3>
+                    <p>Nossa equipe é formada por profissionais experientes e dedicados ao cuidado humanizado.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Disponibilidade</h3>
+                    <p>Atendimento em horários flexíveis, adaptados à sua rotina e necessidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quem Somos</h2>
+                <p>Conheça a equipe de profissionais dedicados a cuidar da sua saúde com excelência e humanização.</p>
+            </div>
+            <div class="team-members">
+                <!-- Membros da equipe seriam listados aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos uma variedade de serviços médicos domiciliares para atender às necessidades da sua família.</p>
+            </div>
+            <div class="services">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Consultas Médicas</h3>
+                    <p>Atendimento clínico geral e especializado no conforto do seu lar.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Check-up Completo</h3>
+                    <p>Avaliação detalhada da sua saúde com exames e orientações personalizadas.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Acompanhamento Contínuo</h3>
+                    <p>Monitoramento regular da sua saúde e ajustes no tratamento quando necessário.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Depoimentos</h2>
+                <p>Veja o que nossos pacientes dizem sobre o atendimento Médicos de Gente.</p>
+            </div>
+            <div class="testimonial-slider">
+                <!-- Depoimentos seriam listados aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Produtos</h2>
+                <p>Conheça os planos e pacotes de atendimento disponíveis para você e sua família.</p>
+            </div>
+            <div class="products">
+                <!-- Produtos seriam listados aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Agendamento -->
+    <section id="agendar">
+        <div class="container">
+            <div class="section-header">
+                <h2>Agende sua Consulta</h2>
+                <p>Entre em contato conosco para agendar uma visita ou tirar suas dúvidas.</p>
+            </div>
+            <div class="contact-form">
+                <!-- Formulário de contato seria inserido aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo-footer.png" alt="Médicos de Gente" class="logo">
+                </div>
+                <div class="footer-nav">
+                    <ul class="footer-menu menu-links">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#team">Quem Somos</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="#agendar">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/medicos.de.gente" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        @medicos.de.gente
+                    </a>
+                </div>
+            </div>
+            <div class="legal-links">
+                <a href="termos.html">Termos de Uso</a> | <a href="privacidade.html">Política de Privacidade</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Médicos de Gente. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/5511999999999" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Script para o funcionamento do menu mobile em coluna lateral
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuMobile = document.querySelector('.menu-mobile');
+            const menu = document.querySelector('.menu');
+            const menuOverlay = document.querySelector('.menu-overlay');
+            
+            // Adiciona botão de fechar ao menu
+            const closeButton = document.createElement('button');
+            closeButton.className = 'menu-close-btn';
+            closeButton.innerHTML = '&times;'; // Símbolo X
+            closeButton.setAttribute('aria-label', 'Fechar menu');
+            menu.appendChild(closeButton);
+            
+            // Abre o menu ao clicar no ícone de hambúrguer
+            menuMobile.addEventListener('click', function() {
+                menu.classList.add('active');
+                menuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Impede rolagem da página
+            });
+            
+            // Fecha o menu ao clicar no botão X
+            closeButton.addEventListener('click', function() {
+                menu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Restaura rolagem da página
+            });
+            
+            // Fecha o menu ao clicar no overlay
+            menuOverlay.addEventListener('click', function() {
+                menu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Restaura rolagem da página
+            });
+            
+            // Fecha o menu ao clicar em um item do menu
+            const menuItems = document.querySelectorAll('.menu a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menu.classList.remove('active');
+                    menuOverlay.classList.remove('active');
+                    document.body.style.overflow = ''; // Restaura rolagem da página
+                });
+            });
+        });
+    </script>
+</body>
+</html>

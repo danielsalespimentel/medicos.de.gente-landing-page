@@ -31,13 +31,13 @@
   display: block;
 }
 
-/* Ajustes para o menu mobile em coluna lateral */
+/* Ajustes para o menu mobile em coluna lateral DIREITA */
 @media (max-width: 991px) {
   .menu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 80%;
+    right: -100%; /* Posiciona o menu à direita, fora da tela */
+    width: 60%; /* Reduz a largura para 60% da tela */
     height: 100vh;
     background-color: #fff;
     padding-top: 60px;
@@ -48,14 +48,16 @@
   }
   
   .menu.active {
-    right: 0;
+    right: 0; /* Desliza o menu para dentro da tela pela direita */
   }
   
   .menu a {
     display: block;
     margin: 15px 0;
-    font-size: 18px;
+    font-size: 16px; /* Reduz o tamanho da fonte */
     text-align: center;
+    color: #3a5ca9;
+    font-weight: 500;
   }
   
   /* Overlay semi-transparente quando o menu está aberto */
@@ -72,5 +74,10 @@
   
   .menu-overlay.active {
     display: block;
+  }
+  
+  /* Espaçamento mais compacto entre itens do menu */
+  .menu li {
+    margin: 10px 0;
   }
 }

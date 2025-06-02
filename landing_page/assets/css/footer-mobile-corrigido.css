@@ -7,12 +7,32 @@
     text-align: center;
   }
   
+  /* Reorganização do rodapé com logo no topo */
+  footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Logo no topo */
+  footer .footer-logo {
+    margin-bottom: 25px;
+    order: 1;
+  }
+  
   /* Reduz o tamanho do logo no rodapé */
   footer .logo, 
   footer .footer-logo img {
     width: 80px;
     height: auto;
-    margin: 0 auto 20px;
+    margin: 0 auto;
+  }
+  
+  /* Menu de links abaixo da logo */
+  footer .footer-nav {
+    width: 100%;
+    order: 2;
+    margin-bottom: 25px;
   }
   
   /* Melhora o espaçamento dos links do menu no rodapé */
@@ -21,7 +41,7 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    margin-bottom: 25px;
+    margin: 0;
     padding: 0;
   }
   
@@ -36,10 +56,16 @@
     font-size: 14px;
   }
   
-  /* Ajusta o Instagram para ficar mais compacto */
+  /* Instagram abaixo dos links */
   footer .social-media {
+    width: 100%;
+    order: 3;
     margin: 15px auto;
     height: auto;
+  }
+  
+  footer .social-media .social-icon {
+    justify-content: center;
   }
   
   /* Ajusta os links legais para ficarem mais elegantes */
@@ -47,6 +73,7 @@
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    order: 4;
   }
   
   /* Ajusta o copyright para ser mais discreto */
@@ -54,13 +81,7 @@
     font-size: 12px;
     margin-top: 15px;
     opacity: 0.8;
-  }
-  
-  /* Ajustes para o layout geral do rodapé */
-  footer .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    order: 5;
   }
   
   /* Ajustes para os links legais */

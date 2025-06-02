@@ -1,4 +1,4 @@
-// Script para o funcionamento do menu mobile em coluna lateral
+// Script para o funcionamento do menu mobile em coluna lateral direita
 document.addEventListener('DOMContentLoaded', function() {
   // Limpar qualquer botão X existente para evitar duplicação
   const existingCloseButtons = document.querySelectorAll('.menu-close-btn');

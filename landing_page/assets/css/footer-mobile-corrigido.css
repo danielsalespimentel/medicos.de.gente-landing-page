@@ -1,0 +1,88 @@
+/* Correções para o rodapé em dispositivos móveis */
+
+/* Ajustes gerais para o rodapé em mobile */
+@media (max-width: 767px) {
+  footer {
+    padding: 30px 15px;
+    text-align: center;
+  }
+  
+  /* Reduz o tamanho do logo no rodapé */
+  footer .logo, 
+  footer .footer-logo img {
+    width: 80px;
+    height: auto;
+    margin: 0 auto 20px;
+  }
+  
+  /* Melhora o espaçamento dos links do menu no rodapé */
+  footer .footer-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  
+  footer .footer-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  footer .footer-menu a {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Ajusta o Instagram para ficar mais compacto */
+  footer .social-media {
+    margin: 15px auto;
+    height: auto;
+  }
+  
+  /* Ajusta os links legais para ficarem mais elegantes */
+  footer .legal-links {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Ajusta o copyright para ser mais discreto */
+  footer .copyright {
+    font-size: 12px;
+    margin-top: 15px;
+    opacity: 0.8;
+  }
+  
+  /* Ajustes para o layout geral do rodapé */
+  footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Ajustes para os links legais */
+  footer .legal-links a,
+  footer .legal-links p {
+    font-size: 12px;
+    margin: 0 5px;
+  }
+}
+
+/* Ajustes específicos para telas muito pequenas */
+@media (max-width: 480px) {
+  footer {
+    padding: 20px 10px;
+  }
+  
+  footer .logo,
+  footer .footer-logo img {
+    width: 70px;
+  }
+  
+  footer .footer-menu a {
+    font-size: 13px;
+  }
+}
